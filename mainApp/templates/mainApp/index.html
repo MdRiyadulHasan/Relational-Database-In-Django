@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap Table Example</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Bootstrap Table Example</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Book_Title</th>
+                <th>Author_Name</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in bookInfo %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.title }}</td>
+                <td>{{ item.authorName }}</td>
+            </tr>
+            {% endfor %}
+           
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Include Bootstrap JS (optional) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
