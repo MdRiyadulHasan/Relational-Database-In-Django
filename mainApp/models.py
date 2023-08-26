@@ -42,14 +42,6 @@ class Student(models.Model):
         return self.name
     class Meta:
         db_table = 'Student'
-    
-# class Course(models.Model):
-#     title = models.CharField(max_length=200)
-#     students = models.ManyToManyField(Student)
-#     def __str__(self):
-#         return self.title
-#     class Meta:
-#         db_table = 'CourseInfo'
 
 class CourseInfo(models.Model):
     title = models.CharField(max_length=200)
